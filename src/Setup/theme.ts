@@ -5,8 +5,10 @@ const theme: {
 } = {
   colors: {
     WHITE: '#FFF',
+    BLACK: '#000',
     DARK_WHITE: '#eeeeee66',
     DEEP_DARK_BLUE: '#00141e',
+    LIGHT_GREEN: '#c3e45d',
   },
   fontSize: {
     small: 15,
