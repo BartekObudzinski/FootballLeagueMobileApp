@@ -1,0 +1,1 @@
+export const HOMEPAGE_SCREEN = 'HOMEPAGE_SCREEN';

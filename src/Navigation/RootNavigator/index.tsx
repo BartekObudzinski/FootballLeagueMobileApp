@@ -1,4 +1,5 @@
 import { TabsBottomMenuStack } from '../TabsBottomMenu';
+import { TABS_BOTTOM_MENU } from '../TabsBottomMenu/consts';
 import { RootStackNavigator } from './consts';
 
 export const RootStack = () => {
@@ -6,7 +7,7 @@ export const RootStack = () => {
     <RootStackNavigator.Navigator>
       <RootStackNavigator.Screen
         options={{ headerShown: false }}
-        name="TabsBottomMenu"
+        name={TABS_BOTTOM_MENU}
         component={TabsBottomMenuStack}
       />
     </RootStackNavigator.Navigator>

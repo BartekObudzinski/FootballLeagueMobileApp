@@ -1,0 +1,1 @@
+export const TABLES_SCREEN = 'TABLES_SCREEN';

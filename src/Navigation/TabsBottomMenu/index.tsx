@@ -1,30 +1,29 @@
-import { Entypo, FontAwesome5 } from '@expo/vector-icons';
 import React from 'react';
-import { TmpComponent } from '../../Views/tmp';
-import { TmpComponentxd } from '../../Views/tmpcopy';
 import { Tab } from './consts';
+import { HomepageTab } from './TabMenuBottomScreens/HomepageTab';
+import { MatchesTab } from './TabMenuBottomScreens/MatchesTab';
+import { TablesTab } from './TabMenuBottomScreens/TablesTab';
 
 export const TabsBottomMenuStack = () => {
   return (
-    <Tab.Navigator>
-      <Tab.Screen
-        options={{
-          headerShown: false,
-          tabBarIcon: () => (
-            <FontAwesome5 name="smoking" size={24} color="black" />
-          ),
-        }}
-        name="TmpScreen"
-        component={TmpComponent}
-      />
-      <Tab.Screen
-        options={{
-          headerShown: false,
-          tabBarIcon: () => <Entypo name="drink" size={24} color="black" />,
-        }}
-        name="TmpScreen2"
-        component={TmpComponentxd}
-      />
+    <Tab.Navigator
+      screenOptions={{
+        tabBarShowLabel: false,
+        tabBarStyle: { position: 'absolute', height: 60 },
+        tabBarIconStyle: { backgroundColor: 'red' },
+        tabBarLabelStyle: { backgroundColor: 'red' },
+        tabBarBadgeStyle: { backgroundColor: 'red' },
+        headerLeftContainerStyle: { backgroundColor: 'yellow' },
+        headerRightContainerStyle: { backgroundColor: 'pink' },
+        headerTitleContainerStyle: { backgroundColor: 'green' },
+        headerBackgroundContainerStyle: { backgroundColor: 'purple' },
+        headerTitleStyle: { backgroundColor: 'grey' },
+        tabBarItemStyle: { backgroundColor: 'orange' },
+      }}
+    >
+      {HomepageTab(Tab)}
+      {MatchesTab(Tab)}
+      {TablesTab(Tab)}
     </Tab.Navigator>
   );
 };

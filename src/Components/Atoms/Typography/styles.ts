@@ -1,5 +1,5 @@
 import styled, { css } from 'styled-components/native';
-import theme from '../../Setup/theme';
+import theme from '../../../Setup/theme';
 import { TypographyStyledProps } from './types';
 
 const { small, medium, large } = theme.fontSize;
