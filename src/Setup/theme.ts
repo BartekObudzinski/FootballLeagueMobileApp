@@ -12,8 +12,8 @@ const theme: {
   },
   fontSize: {
     small: 15,
-    medium: 20,
-    large: 25,
+    medium: 25,
+    large: 40,
   },
   fontFamily: {
     light: 'Baloo-Light',

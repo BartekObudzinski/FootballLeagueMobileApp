@@ -15,7 +15,6 @@ export const TabsBottomMenuStack = () => {
         const { name, label } = iconProperties(route.name);
         const { LIGHT_GREEN, BLACK } = theme.colors;
         return {
-          headerShown: false,
           tabBarIcon: ({ focused }) => {
             return (
               <Entypo
@@ -28,7 +27,7 @@ export const TabsBottomMenuStack = () => {
           tabBarLabel: ({ focused }) => {
             return (
               <Typography
-                variant="small"
+                size="small"
                 style={[
                   styles.tabBarLabel,
                   { color: focused ? LIGHT_GREEN : BLACK },

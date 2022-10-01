@@ -2,7 +2,8 @@ import { ComponentProps } from 'react';
 import { Text } from 'react-native';
 
 export type TypographyStyledProps = {
-  variant?: 'small' | 'medium' | 'large';
+  size?: 'small' | 'medium' | 'large';
+  bold?: boolean;
 };
 
 export type TypographyProps = ComponentProps<typeof Text> &

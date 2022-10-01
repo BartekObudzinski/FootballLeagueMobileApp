@@ -1,10 +1,11 @@
-import { SafeAreaView } from 'react-native-safe-area-context';
+import React from 'react';
+import { View } from 'react-native';
 import { Typography } from '../../Atoms/Typography/styles';
 
 export const Tables = () => {
   return (
-    <SafeAreaView>
+    <View>
       <Typography>Tables Screen</Typography>
-    </SafeAreaView>
+    </View>
   );
 };
