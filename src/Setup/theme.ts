@@ -1,6 +1,7 @@
 const theme: {
   colors: { [key: string]: string };
   fontSize: { [key: string]: number };
+  fontFamily: { [key: string]: string };
 } = {
   colors: {
     WHITE: '#FFF',
@@ -11,6 +12,11 @@ const theme: {
     small: 15,
     medium: 20,
     large: 25,
+  },
+  fontFamily: {
+    light: 'Baloo-Light',
+    regular: 'Baloo-Regular',
+    bold: 'Baloo-Bold',
   },
 };
 
