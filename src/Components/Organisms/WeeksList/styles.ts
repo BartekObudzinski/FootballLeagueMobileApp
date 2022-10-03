@@ -4,7 +4,8 @@ import theme from '../../../Setup/theme';
 
 export const WeekContainer = styled(TouchableOpacity)`
   margin-horizontal: 5;
-  margin-vertical: 15;
+  margin-top: 15;
+  margin-bottom: 5;
   background-color: ${theme.colors.LIGHT_GREEN};
   border-radius: 15px;
   padding-horizontal: 10;
