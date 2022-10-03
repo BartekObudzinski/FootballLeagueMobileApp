@@ -1,3 +1,4 @@
+import { ADMIN_SCREEN } from '../../../../Components/Pages/Admin/consts';
 import { HOMEPAGE_SCREEN } from '../../../../Components/Pages/Homepage/consts';
 import { MATCHES_SCREEN } from '../../../../Components/Pages/Matches/consts';
 import { TABLES_SCREEN } from '../../../../Components/Pages/Tables/consts';
@@ -5,7 +6,7 @@ import { TABLES_SCREEN } from '../../../../Components/Pages/Tables/consts';
 export const iconProperties = (
   routeName: string,
 ): {
-  name: 'home' | 'calendar' | 'trophy' | 'emoji-happy';
+  name: 'home' | 'calendar' | 'trophy' | 'emoji-happy' | 'user';
   label: string;
 } => {
   switch (routeName) {
@@ -23,6 +24,11 @@ export const iconProperties = (
       return {
         name: 'trophy',
         label: 'Tabele',
+      };
+    case ADMIN_SCREEN:
+      return {
+        name: 'user',
+        label: 'Admin',
       };
     default:
       return {

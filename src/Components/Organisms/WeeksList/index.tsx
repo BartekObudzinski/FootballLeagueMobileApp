@@ -2,6 +2,7 @@ import React from 'react';
 import { FlatList } from 'react-native';
 import { Typography } from '../../Atoms/Typography';
 import { WeekContainer } from './styles';
+
 const data = [
   { id: '1', name: 'Kolejka 1', date: '30.09' },
   { id: '2', name: 'Kolejka 2', date: '10.10' },
@@ -19,6 +20,7 @@ export const WeeksList = () => {
   return (
     <FlatList
       data={data}
+      style={{ marginLeft: 10 }}
       focusable
       horizontal
       scrollEnabled

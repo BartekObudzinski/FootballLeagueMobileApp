@@ -1,11 +1,11 @@
 import React from 'react';
 import { View } from 'react-native';
-import { Typography } from '../../Atoms/Typography/styles';
+import { Table } from '../../Organisms/Table';
 
 export const Tables = () => {
   return (
     <View>
-      <Typography>Tables Screen</Typography>
+      <Table />
     </View>
   );
 };

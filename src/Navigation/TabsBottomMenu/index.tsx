@@ -4,6 +4,7 @@ import { Typography } from '../../Components/Atoms/Typography';
 import theme from '../../Setup/theme';
 import { Tab, TAB_ICON_SIZE } from './consts';
 import { styles } from './styles';
+import { AdminTab } from './TabMenuBottomScreens/AdminTab';
 import { HomepageTab } from './TabMenuBottomScreens/HomepageTab';
 import { MatchesTab } from './TabMenuBottomScreens/MatchesTab';
 import { TablesTab } from './TabMenuBottomScreens/TablesTab';
@@ -44,6 +45,7 @@ export const TabsBottomMenuStack = () => {
       {HomepageTab(Tab)}
       {MatchesTab(Tab)}
       {TablesTab(Tab)}
+      {AdminTab(Tab)}
     </Tab.Navigator>
   );
 };
