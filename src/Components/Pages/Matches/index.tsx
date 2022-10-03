@@ -1,10 +1,25 @@
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { Typography } from '../../Atoms/Typography/styles';
+import React from 'react';
+import { View } from 'react-native';
+import { Match } from '../../Organisms/Match';
+import { WeeksList } from '../../Organisms/WeeksList';
 
 export const Matches = () => {
   return (
-    <SafeAreaView>
-      <Typography>Matches Screen</Typography>
-    </SafeAreaView>
+    <View>
+      <WeeksList />
+      <View
+        style={{
+          padding: 10,
+        }}
+      >
+        <Match />
+        <Match />
+        <Match />
+
+        <Match />
+
+        <Match />
+      </View>
+    </View>
   );
 };

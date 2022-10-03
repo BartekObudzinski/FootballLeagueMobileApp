@@ -1,13 +1,13 @@
-import { SafeAreaView } from 'react-native-safe-area-context';
+import React from 'react';
+import { View } from 'react-native';
 import { Typography } from '../../Atoms/Typography/styles';
 
 export const Homepage = () => {
   return (
-    <SafeAreaView>
-      <Typography variant="small">Homepage Screen</Typography>
-      <Typography variant="medium">Homepage Screen</Typography>
-
-      <Typography variant="large">Homepage Screen</Typography>
-    </SafeAreaView>
+    <View>
+      <Typography size="small">Homepage Screen</Typography>
+      <Typography size="medium">Homepage Screen</Typography>
+      <Typography size="large">Homepage Screen</Typography>
+    </View>
   );
 };
