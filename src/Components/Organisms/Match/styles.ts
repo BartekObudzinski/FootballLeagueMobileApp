@@ -1,5 +1,5 @@
-import { TouchableOpacity, View } from 'react-native';
 import styled from 'styled-components/native';
+import { TouchableOpacity, View } from 'react-native';
 
 export const PressableContainer = styled(TouchableOpacity)`
   width: 100%;

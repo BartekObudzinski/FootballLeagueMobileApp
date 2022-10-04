@@ -1,17 +1,23 @@
-import { Entypo } from '@expo/vector-icons';
 import React from 'react';
-import { Typography } from '../../Components/Atoms/Typography';
-import theme from '../../Setup/theme';
-import { Tab, TAB_ICON_SIZE } from './consts';
+import theme from 'Setup/theme';
+import { Admin } from 'Components/Pages/Admin';
+import { ADMIN_SCREEN } from 'Components/Pages/Admin/consts';
+import { Entypo } from '@expo/vector-icons';
+import { Homepage } from 'Components/Pages/Homepage';
+import { HOMEPAGE_SCREEN } from 'Components/Pages/Homepage/consts';
+import { iconProperties } from './Utils/icon-properties';
+import { Matches } from 'Components/Pages/Matches';
+import { MATCHES_SCREEN } from 'Components/Pages/Matches/consts';
 import { styles } from './styles';
-import { AdminTab } from './TabMenuBottomScreens/AdminTab';
-import { HomepageTab } from './TabMenuBottomScreens/HomepageTab';
-import { MatchesTab } from './TabMenuBottomScreens/MatchesTab';
-import { TablesTab } from './TabMenuBottomScreens/TablesTab';
-import { iconProperties } from './TabMenuBottomScreens/Utils/icon-properties';
+import { Tab, TAB_ICON_SIZE } from './consts';
+import { Tables } from 'Components/Pages/Tables';
+import { TABLES_SCREEN } from 'Components/Pages/Tables/consts';
+import { Typography } from 'Components/Atoms/Typography';
+
 export const TabsBottomMenuStack = () => {
   return (
     <Tab.Navigator
+      /** Move screen options to constant */
       screenOptions={({ route }) => {
         const { name, label } = iconProperties(route.name);
         const { LIGHT_GREEN, BLACK } = theme.colors;
@@ -42,10 +48,10 @@ export const TabsBottomMenuStack = () => {
         };
       }}
     >
-      {HomepageTab(Tab)}
-      {MatchesTab(Tab)}
-      {TablesTab(Tab)}
-      {AdminTab(Tab)}
+      <Tab.Screen name={HOMEPAGE_SCREEN} component={Homepage} />
+      <Tab.Screen name={MATCHES_SCREEN} component={Matches} />
+      <Tab.Screen name={TABLES_SCREEN} component={Tables} />
+      <Tab.Screen name={ADMIN_SCREEN} component={Admin} />
     </Tab.Navigator>
   );
 };

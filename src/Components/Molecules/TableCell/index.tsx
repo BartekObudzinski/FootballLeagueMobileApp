@@ -1,8 +1,8 @@
 import React from 'react';
-import { View } from 'react-native';
-import { Typography } from '../../Atoms/Typography/styles';
 import { Container } from './styles';
 import { TableCellProps } from './types';
+import { Typography } from 'Components/Atoms/Typography';
+import { View } from 'react-native';
 
 export const TableCell: React.FC<TableCellProps> = ({ data }) => {
   const { balance, standing, points, name, matches } = data;

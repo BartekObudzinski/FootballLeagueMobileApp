@@ -1,8 +1,8 @@
 import React from 'react';
+import theme from 'Setup/theme';
+import { dataHeader, dataTeams } from 'Utils/mocked-data';
+import { TableCell } from 'Components/Molecules/TableCell';
 import { View } from 'react-native';
-import theme from '../../../Setup/theme';
-import { dataHeader, dataTeams } from '../../../Utils/mocked-data';
-import { TableCell } from '../../Molecules/TableCell';
 
 export const Table = () => {
   return (

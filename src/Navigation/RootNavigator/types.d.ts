@@ -1,4 +1,4 @@
-import { TABS_BOTTOM_MENU } from '../TabsBottomMenu/consts';
+import { TABS_BOTTOM_MENU } from 'Navigation/TabsBottomMenu/consts';
 
 export type RootStackParamList = {
   [TABS_BOTTOM_MENU]: {

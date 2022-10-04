@@ -1,9 +1,9 @@
 import styled, { css } from 'styled-components/native';
-import theme from '../../../Setup/theme';
+import theme from 'Setup/theme';
 import { TypographyStyledProps } from './types';
 
 const { small, medium, large } = theme.fontSize;
-const { light, regular, bold } = theme.fontFamily;
+const { regular } = theme.fontFamily;
 
 export const Typography = styled.Text<TypographyStyledProps>`
   font-family: ${regular}

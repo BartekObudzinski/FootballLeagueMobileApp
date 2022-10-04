@@ -1,6 +1,6 @@
 import React from 'react';
+import { Typography } from 'Components/Atoms/Typography';
 import { View } from 'react-native';
-import { Typography } from '../../Atoms/Typography/styles';
 
 export const Homepage = () => {
   return (

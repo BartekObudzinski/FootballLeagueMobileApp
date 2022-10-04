@@ -1,6 +1,6 @@
 import React from 'react';
 import { FlatList } from 'react-native';
-import { Typography } from '../../Atoms/Typography';
+import { Typography } from 'Components/Atoms/Typography';
 import { WeekContainer } from './styles';
 
 const data = [

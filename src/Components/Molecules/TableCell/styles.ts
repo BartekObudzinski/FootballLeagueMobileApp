@@ -1,6 +1,6 @@
-import { View } from 'react-native';
 import styled, { css } from 'styled-components/native';
 import { StyledContainerProps } from './types';
+import { View } from 'react-native';
 
 export const Container = styled(View)<StyledContainerProps>`
   width: 100%;

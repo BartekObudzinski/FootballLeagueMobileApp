@@ -1,6 +1,6 @@
 import React from 'react';
+import { Table } from 'Components/Organisms/Table';
 import { View } from 'react-native';
-import { Table } from '../../Organisms/Table';
 
 export const Tables = () => {
   return (

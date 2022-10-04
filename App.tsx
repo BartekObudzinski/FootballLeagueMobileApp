@@ -1,10 +1,12 @@
-import { NavigationContainer } from '@react-navigation/native';
-import { useFonts } from 'expo-font';
 import React from 'react';
 import { LogBox } from 'react-native';
+import { NavigationContainer } from '@react-navigation/native';
 import { RootStack } from './src/Navigation/RootNavigator';
+import { useFonts } from 'expo-font';
+
 LogBox.ignoreAllLogs();
 const App = () => {
+  /** If something is unsued at the end, delete it */
   const [fontsLoaded] = useFonts({
     'Baloo-Bold': require('./src/Assets/Fonts/Baloo-Bold.ttf'),
     'Baloo-ExtraBold': require('./src/Assets/Fonts/Baloo-ExtraBold.ttf'),
@@ -14,7 +16,7 @@ const App = () => {
   });
 
   if (!fontsLoaded) {
-    return <></>;
+    return null;
   }
 
   return (

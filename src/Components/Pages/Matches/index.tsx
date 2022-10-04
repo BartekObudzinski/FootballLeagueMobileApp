@@ -1,9 +1,9 @@
 import React from 'react';
-import { View } from 'react-native';
-import { Typography } from '../../Atoms/Typography';
-import { Match } from '../../Organisms/Match';
-import { WeeksList } from '../../Organisms/WeeksList';
 import { Container } from './styles';
+import { Match } from 'Components/Organisms/Match';
+import { Typography } from 'Components/Atoms/Typography';
+import { View } from 'react-native';
+import { WeeksList } from 'Components/Organisms/WeeksList';
 
 export const Matches = () => {
   return (

@@ -1,7 +1,7 @@
 import React from 'react';
-import { Typography } from '../../Atoms/Typography';
-import { MatchTeamName } from '../../Molecules/MatchTeamName';
 import { DetailsContainer, PressableContainer } from './styles';
+import { MatchTeamName } from 'Components/Molecules/MatchTeamName';
+import { Typography } from 'Components/Atoms/Typography';
 
 export const Match = () => {
   const showResult = false;

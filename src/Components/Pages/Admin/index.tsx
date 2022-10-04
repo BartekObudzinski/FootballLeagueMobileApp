@@ -1,6 +1,6 @@
 import React from 'react';
+import { AddValueContainer } from 'Components/Molecules/AddValueContainer';
 import { View } from 'react-native';
-import { AddValueContainer } from '../../Molecules/AddValueContainer';
 
 export const Admin = () => {
   return (

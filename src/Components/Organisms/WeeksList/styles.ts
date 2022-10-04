@@ -1,6 +1,6 @@
-import { FlatList, TouchableOpacity } from 'react-native';
 import styled from 'styled-components/native';
-import theme from '../../../Setup/theme';
+import theme from 'Setup/theme';
+import { FlatList, TouchableOpacity } from 'react-native';
 
 export const WeekContainer = styled(TouchableOpacity)`
   margin-right: 10;

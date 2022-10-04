@@ -1,6 +1,6 @@
-import { TabsBottomMenuStack } from '../TabsBottomMenu';
-import { TABS_BOTTOM_MENU } from '../TabsBottomMenu/consts';
 import { RootStackNavigator } from './consts';
+import { TABS_BOTTOM_MENU } from 'Navigation/TabsBottomMenu/consts';
+import { TabsBottomMenuStack } from 'Navigation/TabsBottomMenu';
 
 export const RootStack = () => {
   return (
