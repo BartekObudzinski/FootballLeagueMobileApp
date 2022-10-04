@@ -13,6 +13,7 @@ import { Tab, TAB_ICON_SIZE } from './consts';
 import { Tables } from 'Components/Pages/Tables';
 import { TABLES_SCREEN } from 'Components/Pages/Tables/consts';
 import { Typography } from 'Components/Atoms/Typography';
+import { headerLabel } from './Utils/header-label';
 
 export const TabsBottomMenuStack = () => {
   return (
@@ -22,6 +23,17 @@ export const TabsBottomMenuStack = () => {
         const { name, label } = iconProperties(route.name);
         const { LIGHT_GREEN, BLACK } = theme.colors;
         return {
+          headerLeft: () => {
+            return (
+              <Entypo name="emoji-flirt" size={30} style={{ marginLeft: 10 }} />
+            );
+          },
+          headerTitle: () => (
+            <Typography bold>{headerLabel(route.name)}</Typography>
+          ),
+          headerRight: () => {
+            return <Entypo name="cog" size={30} style={{ marginRight: 10 }} />;
+          },
           tabBarIcon: ({ focused }) => {
             return (
               <Entypo
