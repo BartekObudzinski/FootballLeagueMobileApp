@@ -7,9 +7,14 @@ export type TableData = {
 };
 
 export type StyledContainerProps = {
-  backgroundColor?: string;
+  isHeaderRow?: boolean;
 };
 
-export type TableCellProps = {
+export type StyledCellContainerProps = {
+  /** Stretch cell in a table row */
+  long?: boolean;
+};
+
+export type TableRowProps = {
   data: TableData;
 } & StyledContainerProps;

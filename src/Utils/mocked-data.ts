@@ -79,7 +79,7 @@ export const dataTeams: {
 
 export const dataHeader = {
   standing: '#',
-  name: 'Team',
+  name: 'Drużyna',
   matches: 'M',
   balance: 'B',
   points: 'P',

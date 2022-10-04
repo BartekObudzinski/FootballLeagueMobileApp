@@ -9,6 +9,7 @@ const theme: {
     DARK_WHITE: '#eeeeee66',
     DEEP_DARK_BLUE: '#00141e',
     LIGHT_GREEN: '#c3e45d',
+    DARK_GREEN_OPACITY: '#6e8f0966',
   },
   fontSize: {
     small: 15,

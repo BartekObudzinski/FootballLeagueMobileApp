@@ -1,16 +1,15 @@
 import React from 'react';
-import theme from 'Setup/theme';
+import { Container } from './styles';
 import { dataHeader, dataTeams } from 'Utils/mocked-data';
-import { TableCell } from 'Components/Molecules/TableCell';
-import { View } from 'react-native';
+import { TableRow } from 'Components/Molecules/TableRow';
 
 export const Table = () => {
   return (
-    <View>
-      <TableCell data={dataHeader} backgroundColor={theme.colors.LIGHT_GREEN} />
+    <Container>
+      <TableRow data={dataHeader} isHeaderRow />
       {dataTeams.map((dataTeam) => (
-        <TableCell key={dataTeam.name} data={dataTeam} />
+        <TableRow key={dataTeam.name} data={dataTeam} />
       ))}
-    </View>
+    </Container>
   );
 };
