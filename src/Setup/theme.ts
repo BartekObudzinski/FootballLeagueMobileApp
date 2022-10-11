@@ -4,17 +4,19 @@ const theme: {
   fontFamily: { [key: string]: string };
 } = {
   colors: {
+    PRIMARY: '#219EBC',
+    SECONDARY: '#023047',
     WHITE: '#FFF',
     BLACK: '#000',
     DARK_WHITE: '#eeeeee66',
     DEEP_DARK_BLUE: '#00141e',
-    LIGHT_GREEN: '#c3e45d',
-    DARK_GREEN_OPACITY: '#6e8f0966',
+    DARK_GREEN_OPACITY: '#02304733',
   },
   fontSize: {
-    small: 15,
-    medium: 25,
-    large: 40,
+    small: 20,
+    medium: 30,
+    large: 72,
+    extraLarge: 140,
   },
   fontFamily: {
     light: 'Baloo-Light',

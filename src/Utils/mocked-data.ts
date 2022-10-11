@@ -7,21 +7,21 @@ export const dataTeams: {
 }[] = [
   {
     standing: '1.',
-    name: 'Joga Bonito',
+    name: 'Team 1',
     matches: '4',
     balance: '4:4',
     points: '4',
   },
   {
     standing: '2.',
-    name: 'Gazyl Mistrze',
+    name: 'Team 2',
     matches: '4',
     balance: '4:4',
     points: '4',
   },
   {
     standing: '3.',
-    name: 'Copacabana',
+    name: 'Team 3',
     matches: '4',
     balance: '4:4',
     points: '4',
@@ -69,7 +69,7 @@ export const dataTeams: {
     points: '4',
   },
   {
-    standing: '10.',
+    standing: '20.',
     name: 'Joga Bonito',
     matches: '4',
     balance: '4:4',

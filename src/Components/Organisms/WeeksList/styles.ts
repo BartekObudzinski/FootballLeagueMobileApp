@@ -9,8 +9,9 @@ export const WeekContainer = styled(TouchableOpacity)`
   background-color: ${theme.colors.LIGHT_GREEN};
   border-radius: 15px;
   padding-horizontal: 10;
-  padding-vertical: 20;
+  padding-vertical: 5;
   align-items: center;
+  justify-content: center;
 `;
 
 export const WeeksList = styled(FlatList)`

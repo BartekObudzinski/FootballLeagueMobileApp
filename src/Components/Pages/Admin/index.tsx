@@ -1,13 +1,13 @@
-import React from 'react';
 import { AddValueContainer } from 'Components/Molecules/AddValueContainer';
-import { View } from 'react-native';
+import React from 'react';
+import { Container } from './styles';
 
 export const Admin = () => {
   return (
-    <View>
+    <Container>
       <AddValueContainer text="Dodaj Drużynę" />
       <AddValueContainer text="Dodaj Kolejkę" />
       <AddValueContainer text="Dodaj Spotkanie" />
-    </View>
+    </Container>
   );
 };
