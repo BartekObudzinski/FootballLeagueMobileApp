@@ -1,5 +1,5 @@
-import styled from 'styled-components/native';
 import { TouchableOpacity, View } from 'react-native';
+import styled from 'styled-components/native';
 
 export const PressableContainer = styled(TouchableOpacity)`
   width: 100%;
@@ -9,7 +9,7 @@ export const PressableContainer = styled(TouchableOpacity)`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  padding-vertical: 10;
+  padding-vertical: 5;
 `;
 
 export const DetailsContainer = styled(View)`

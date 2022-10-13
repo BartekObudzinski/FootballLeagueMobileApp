@@ -23,11 +23,6 @@ export const TabsBottomMenuStack = () => {
         const { name, label } = iconProperties(route.name);
         const { PRIMARY, BLACK } = theme.colors;
         return {
-          headerLeft: () => {
-            return (
-              <Entypo name="emoji-flirt" size={30} style={{ marginLeft: 10 }} />
-            );
-          },
           headerTitle: () => (
             <Typography bold>{headerLabel(route.name)}</Typography>
           ),
@@ -49,7 +44,7 @@ export const TabsBottomMenuStack = () => {
                 size="small"
                 style={[
                   styles.tabBarLabel,
-                  { color: focused ? PRIMARY : BLACK },
+                  { color: focused ? PRIMARY : BLACK, fontSize: 15 }, // TODO: Delete hardcoded value
                 ]}
               >
                 {label}

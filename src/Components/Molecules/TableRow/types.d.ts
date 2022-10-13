@@ -10,11 +10,6 @@ export type StyledContainerProps = {
   isHeaderRow?: boolean;
 };
 
-export type StyledCellContainerProps = {
-  /** Stretch cell in a table row */
-  long?: boolean;
-};
-
 export type TableRowProps = {
   data: TableData;
 } & StyledContainerProps;

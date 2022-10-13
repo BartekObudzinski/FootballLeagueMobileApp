@@ -1,8 +1,7 @@
-import styled, { css } from 'styled-components/native';
-import { StyledCellContainerProps, StyledContainerProps } from './types';
 import { View } from 'react-native';
 import theme from 'Setup/theme';
-import { Typography } from 'Components/Atoms/Typography';
+import styled, { css } from 'styled-components/native';
+import { StyledContainerProps } from './types';
 
 export const Container = styled(View)<StyledContainerProps>`
   width: 100%;
@@ -14,18 +13,7 @@ export const Container = styled(View)<StyledContainerProps>`
   ${({ isHeaderRow }) =>
     isHeaderRow &&
     css`
-      background-color: ${theme.colors.LIGHT_GREEN};
+      background-color: ${theme.colors.SECONDARY};
       padding-vertical: 0;
-    `}
-`;
-
-export const CellContainer = styled(View)<StyledCellContainerProps>`
-  width: 40px;
-  align-items: center;
-  ${({ long }) =>
-    long &&
-    css`
-      flex: 1;
-      align-items: flex-start;
     `}
 `;

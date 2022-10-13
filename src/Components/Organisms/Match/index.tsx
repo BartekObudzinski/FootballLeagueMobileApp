@@ -1,17 +1,18 @@
+import { useNavigation } from '@react-navigation/core';
+import { Typography } from 'Components/Atoms/Typography';
+import { MatchTeamName } from 'Components/Molecules/MatchTeamName';
+import { MATCH_DETAILS_SCREEN } from 'Navigation/MatchDetailsScreen/consts';
 import React from 'react';
 import { DetailsContainer, PressableContainer } from './styles';
-import { MatchTeamName } from 'Components/Molecules/MatchTeamName';
-import { Typography } from 'Components/Atoms/Typography';
-import { useNavigation } from '@react-navigation/core';
-import { MATCH_DETAILS_SCREEN } from 'Navigation/MatchDetailsScreen/consts';
 
 export const Match = () => {
   const showResult = false;
-  const navigation = useNavigation();
+  // TODO: Type Navigation or create custom hook
+  const { navigate } = useNavigation<any>();
   return (
     <PressableContainer
       onPress={() =>
-        navigation.navigate(MATCH_DETAILS_SCREEN, {
+        navigate(MATCH_DETAILS_SCREEN, {
           id: '1',
         })
       }
@@ -19,11 +20,13 @@ export const Match = () => {
       <MatchTeamName teamName="Team 1" />
       <DetailsContainer>
         {showResult ? (
-          <Typography size="large">{`1 : 0`}</Typography>
+          <Typography size="medium">{`1 : 0`}</Typography>
         ) : (
           <>
-            <Typography>18:30</Typography>
-            <Typography size="small">30.09</Typography>
+            <Typography size="medium">18:30</Typography>
+            <Typography size="small" style={{ marginTop: -15 }}>
+              30.09
+            </Typography>
           </>
         )}
       </DetailsContainer>

@@ -1,6 +1,10 @@
+import { ScrollView, View } from 'react-native';
 import styled from 'styled-components/native';
-import { View } from 'react-native';
+
+export const ScrollContainer = styled(ScrollView)`
+  padding-horizontal: 10;
+`;
 
 export const Container = styled(View)`
-  padding-horizontal: 10;
+  /* height: 100%; */
 `;

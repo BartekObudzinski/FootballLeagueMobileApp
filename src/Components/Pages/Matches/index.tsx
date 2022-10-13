@@ -1,22 +1,23 @@
-import React from 'react';
-import { Container } from './styles';
-import { Match } from 'Components/Organisms/Match';
 import { Typography } from 'Components/Atoms/Typography';
-import { View } from 'react-native';
+import { Match } from 'Components/Organisms/Match';
 import { WeeksList } from 'Components/Organisms/WeeksList';
+import React from 'react';
+import { Container, ScrollContainer } from './styles';
 
 export const Matches = () => {
   return (
-    <View>
+    <Container>
       <WeeksList />
-      <Container>
-        <Typography size="large"> Kolejka 1</Typography>
+      <Typography size="small" style={{ marginLeft: 10 }}>
+        Kolejka 1
+      </Typography>
+      <ScrollContainer showsVerticalScrollIndicator={false}>
         <Match />
         <Match />
         <Match />
         <Match />
         <Match />
-      </Container>
-    </View>
+      </ScrollContainer>
+    </Container>
   );
 };

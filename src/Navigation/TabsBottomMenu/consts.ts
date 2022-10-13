@@ -5,4 +5,4 @@ export const Tab = createBottomTabNavigator<TabBottomMenuParamList>();
 
 export const TABS_BOTTOM_MENU = 'TabsBottomMenu';
 
-export const TAB_ICON_SIZE = 30;
+export const TAB_ICON_SIZE = 25;
