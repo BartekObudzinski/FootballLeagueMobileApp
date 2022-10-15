@@ -3,9 +3,9 @@ import theme from 'Setup/theme';
 import styled from 'styled-components/native';
 
 export const WeekContainer = styled(TouchableOpacity)`
-  margin-right: 10;
-  margin-top: 15;
-  margin-bottom: 5;
+  margin-right: 10px;
+  margin-top: 15px;
+  margin-bottom: 5px;
   background-color: ${theme.colors.SECONDARY};
   border-radius: 10px;
   padding-horizontal: 15;

@@ -16,6 +16,7 @@ import { headerLabel } from './Utils/header-label';
 import { iconProperties } from './Utils/icon-properties';
 
 export const TabsBottomMenuStack = () => {
+  const isUserAuth = false;
   return (
     <Tab.Navigator
       /** Move screen options to constant */
@@ -58,7 +59,7 @@ export const TabsBottomMenuStack = () => {
       <Tab.Screen name={HOMEPAGE_SCREEN} component={Homepage} />
       <Tab.Screen name={MATCHES_SCREEN} component={Matches} />
       <Tab.Screen name={TABLES_SCREEN} component={Tables} />
-      <Tab.Screen name={ADMIN_SCREEN} component={Admin} />
+      {isUserAuth && <Tab.Screen name={ADMIN_SCREEN} component={Admin} />}
     </Tab.Navigator>
   );
 };

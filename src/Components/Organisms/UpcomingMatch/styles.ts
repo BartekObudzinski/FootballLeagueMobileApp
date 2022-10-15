@@ -36,12 +36,12 @@ export const StyledTypography = styled(Typography)<StyledTypographyProps>`
   ${({ marginBottom }) =>
     marginBottom &&
     css`
-      margin-bottom: -25;
+      margin-bottom: -25px;
     `}
 
   ${({ marginTop }) =>
     marginTop &&
     css`
-      margin-top: -20;
+      margin-top: -20px;
     `}
 `;

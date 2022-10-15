@@ -11,8 +11,12 @@ const theme: {
     DARK_WHITE: '#eeeeee66',
     DEEP_DARK_BLUE: '#00141e',
     DARK_GREEN_OPACITY: '#02304733',
+    SILVER: '#ABABAB',
+    GOLD: '#DFB958',
+    BRONZE: '#9C7F73',
   },
   fontSize: {
+    little: 15,
     small: 20,
     medium: 30,
     large: 72,
