@@ -4,7 +4,7 @@ import { View } from 'react-native';
 
 export const Tables = () => {
   return (
-    <View style={{ marginTop: 10 }}>
+    <View style={{ marginTop: 15 }}>
       <Table />
     </View>
   );

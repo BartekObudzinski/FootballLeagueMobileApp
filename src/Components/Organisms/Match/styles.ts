@@ -10,6 +10,7 @@ export const PressableContainer = styled(TouchableOpacity)`
   justify-content: space-between;
   align-items: center;
   padding-vertical: 5;
+  border: 1px black solid;
 `;
 
 export const DetailsContainer = styled(View)`

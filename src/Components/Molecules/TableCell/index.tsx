@@ -6,6 +6,7 @@ export const TableCell: React.FC<TableCellProps> = ({
   isHeaderRow,
   long,
   value,
+  onPress,
 }) => {
   return (
     <CellContainer long={long} isHeaderRow={isHeaderRow}>

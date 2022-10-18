@@ -3,6 +3,7 @@ import { Typography } from 'Components/Atoms/Typography';
 import { MatchTeamName } from 'Components/Molecules/MatchTeamName';
 import { MATCH_DETAILS_SCREEN } from 'Navigation/MatchDetailsScreen/consts';
 import React from 'react';
+import { Shadow } from 'react-native-shadow-2';
 import { DetailsContainer, PressableContainer } from './styles';
 
 export const Match = () => {

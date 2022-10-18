@@ -9,6 +9,7 @@ export const Homepage = () => {
     <Container>
       <Typography size="small">Nadchodzące spotaknie</Typography>
       <UpcomingMatch />
+      <Typography size="small">TOP 3</Typography>
 
       <BestTeams />
     </Container>

@@ -19,11 +19,13 @@ export const TabsBottomMenuStack = () => {
   const isUserAuth = false;
   return (
     <Tab.Navigator
+      sceneContainerStyle={{ backgroundColor: theme.colors.WHITE }}
       /** Move screen options to constant */
       screenOptions={({ route }) => {
         const { name, label } = iconProperties(route.name);
         const { PRIMARY, BLACK } = theme.colors;
         return {
+          headerShadowVisible: false,
           headerTitle: () => (
             <Typography bold>{headerLabel(route.name)}</Typography>
           ),

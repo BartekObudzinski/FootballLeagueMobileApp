@@ -1,9 +1,9 @@
-import { View } from 'react-native';
+import { Pressable } from 'react-native';
 import theme from 'Setup/theme';
 import styled, { css } from 'styled-components/native';
 import { StyledContainerProps } from './types';
 
-export const Container = styled(View)<StyledContainerProps>`
+export const Container = styled(Pressable)<StyledContainerProps>`
   width: 100%;
   flex-direction: row;
   justify-content: space-between;
