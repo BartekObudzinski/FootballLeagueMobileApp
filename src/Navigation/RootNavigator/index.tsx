@@ -1,4 +1,8 @@
+import { LoginScreen } from 'Components/Pages/LoginScreen';
+import { LOGIN_SCREEN } from 'Components/Pages/LoginScreen/consts';
 import { MatchDetails } from 'Components/Pages/MachDetails';
+import { SettingsScreen } from 'Components/Pages/SettingsScreen';
+import { SETTINGS_SCREEN } from 'Components/Pages/SettingsScreen/consts';
 import { TeamDetails } from 'Components/Pages/TeamDetails';
 import { MATCH_DETAILS_SCREEN } from 'Navigation/MatchDetailsScreen/consts';
 import { TabsBottomMenuStack } from 'Navigation/TabsBottomMenu';
@@ -34,6 +38,24 @@ export const RootStack = () => {
         }}
         name={TEAM_DETAILS_SCREEN}
         component={TeamDetails}
+      />
+
+      <RootStackNavigator.Screen
+        options={{
+          contentStyle: { backgroundColor: theme.colors.WHITE },
+          headerTitle: 'Ustawienia',
+        }}
+        name={SETTINGS_SCREEN}
+        component={SettingsScreen}
+      />
+
+      <RootStackNavigator.Screen
+        options={{
+          contentStyle: { backgroundColor: theme.colors.WHITE },
+          headerTitle: 'Login',
+        }}
+        name={LOGIN_SCREEN}
+        component={LoginScreen}
       />
     </RootStackNavigator.Navigator>
   );

@@ -1,14 +1,9 @@
-import { AntDesign, Fontisto } from '@expo/vector-icons';
-import { useNavigation, useRoute } from '@react-navigation/native';
 import { BackArrowIcon } from 'Components/Atoms/BackArrowIcon';
-import { Typography } from 'Components/Atoms/Typography';
-import { DetailFromStatistic } from 'Components/Molecules/DetailFromStatistic';
 import { TeamMatches } from 'Components/Organisms/TeamMatches';
 import { TeamStats } from 'Components/Organisms/TeamStats';
 import React, { useState } from 'react';
-import { Pressable, View } from 'react-native';
-import { SafeAreaView } from 'react-native-safe-area-context';
-import { SceneMap, TabBar, TabView } from 'react-native-tab-view';
+import { SceneMap, TabView, TabBar } from 'react-native-tab-view';
+
 import theme from 'Setup/theme';
 import {
   BodyContainer,

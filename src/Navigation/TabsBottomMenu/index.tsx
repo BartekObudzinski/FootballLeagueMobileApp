@@ -1,4 +1,5 @@
 import { Entypo } from '@expo/vector-icons';
+import { useNavigation } from '@react-navigation/native';
 import { Typography } from 'Components/Atoms/Typography';
 import { Admin } from 'Components/Pages/Admin';
 import { ADMIN_SCREEN } from 'Components/Pages/Admin/consts';
@@ -6,6 +7,7 @@ import { Homepage } from 'Components/Pages/Homepage';
 import { HOMEPAGE_SCREEN } from 'Components/Pages/Homepage/consts';
 import { Matches } from 'Components/Pages/Matches';
 import { MATCHES_SCREEN } from 'Components/Pages/Matches/consts';
+import { SETTINGS_SCREEN } from 'Components/Pages/SettingsScreen/consts';
 import { Tables } from 'Components/Pages/Tables';
 import { TABLES_SCREEN } from 'Components/Pages/Tables/consts';
 import React from 'react';
@@ -24,13 +26,24 @@ export const TabsBottomMenuStack = () => {
       screenOptions={({ route }) => {
         const { name, label } = iconProperties(route.name);
         const { PRIMARY, BLACK } = theme.colors;
+        const { navigate } = useNavigation<any>();
+        const xd = () => {
+          navigate(SETTINGS_SCREEN);
+        };
         return {
           headerShadowVisible: false,
           headerTitle: () => (
             <Typography bold>{headerLabel(route.name)}</Typography>
           ),
           headerRight: () => {
-            return <Entypo name="cog" size={30} style={{ marginRight: 10 }} />;
+            return (
+              <Entypo
+                name="cog"
+                onPress={xd}
+                size={30}
+                style={{ marginRight: 10 }}
+              />
+            );
           },
           tabBarIcon: ({ focused }) => {
             return (
