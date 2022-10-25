@@ -12,8 +12,8 @@ export const PodiumBar: React.FC<PodiumBarProps> = ({
   position,
   teamLabel,
 }) => {
-  //TODO: I DONT KNOW THIS FUCKING STYLED COMPONENTS DOES NOT WORK ILL FIGURE IT OUT LATER
-  const dupa = () => {
+  //TODO: Workaround
+  const positionStyles = () => {
     switch (position) {
       case '1':
         return { height: '80%', backgroundColor: theme.colors.GOLD };
@@ -28,7 +28,7 @@ export const PodiumBar: React.FC<PodiumBarProps> = ({
   return (
     <Container>
       <StyledTypography>{teamLabel}</StyledTypography>
-      <PositionContainer style={dupa()}>
+      <PositionContainer style={positionStyles()}>
         <PositionTypography size="large">{position}</PositionTypography>
       </PositionContainer>
     </Container>

@@ -28,10 +28,8 @@ export const WeeksList = () => {
       keyExtractor={(item) => item.id}
       renderItem={(props) => (
         <WeekContainer>
-          <Typography size="small" style={{ color: 'white' }}>
-            {props.item.name}
-          </Typography>
-          <Typography size="small" style={{ marginTop: -10, color: 'white' }}>
+          <Typography style={{ color: 'white' }}>{props.item.name}</Typography>
+          <Typography style={{ marginTop: -10, color: 'white' }}>
             {props.item.date}
           </Typography>
         </WeekContainer>

@@ -1,0 +1,1 @@
+export const WEEK_FORM_SCREEN = 'WEEK_FORM_SCREEN';

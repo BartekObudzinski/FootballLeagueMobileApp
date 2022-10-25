@@ -8,6 +8,7 @@ export type TableData = {
 
 export type StyledContainerProps = {
   isHeaderRow?: boolean;
+  isLastElement?: boolean;
 };
 
 export type TableRowProps = {

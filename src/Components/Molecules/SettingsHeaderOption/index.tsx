@@ -15,7 +15,7 @@ export const SettingsHeaderOption: React.FC<SettingsHeaderOptionProps> = ({
     <Container>
       <TitleContainer>
         {iconComponent}
-        <StyledTypography size="small">{title}</StyledTypography>
+        <StyledTypography>{title}</StyledTypography>
       </TitleContainer>
       <View>{actionComponent}</View>
     </Container>

@@ -1,0 +1,1 @@
+export const RESULT_FORM_SCREEN = 'RESULT_FORM_SCREEN';

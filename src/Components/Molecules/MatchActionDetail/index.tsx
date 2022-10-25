@@ -11,9 +11,7 @@ export const MatchActionDetail: React.FC<MatchActionDetailProps> = ({
   return (
     <Container isGuest={isGuest}>
       <Ionicons name="md-football" size={20} color="black" />
-      <Typography size="small" style={{ marginHorizontal: 5 }}>
-        Kowalczyk Damian
-      </Typography>
+      <Typography style={{ marginHorizontal: 5 }}>Kowalczyk Damian</Typography>
     </Container>
   );
 };

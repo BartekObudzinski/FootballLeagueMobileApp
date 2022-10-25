@@ -7,8 +7,12 @@ export const Table = () => {
   return (
     <Container>
       <TableRow data={dataHeader} isHeaderRow />
-      {dataTeams.map((dataTeam) => (
-        <TableRow key={dataTeam.name} data={dataTeam} />
+      {dataTeams.map((dataTeam, index) => (
+        <TableRow
+          key={dataTeam.name}
+          data={dataTeam}
+          isLastElement={index === dataTeams.length - 1}
+        />
       ))}
     </Container>
   );

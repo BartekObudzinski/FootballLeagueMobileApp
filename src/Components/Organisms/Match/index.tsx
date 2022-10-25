@@ -25,9 +25,7 @@ export const Match = () => {
         ) : (
           <>
             <Typography size="medium">18:30</Typography>
-            <Typography size="small" style={{ marginTop: -15 }}>
-              30.09
-            </Typography>
+            <Typography style={{ marginTop: -15 }}>30.09</Typography>
           </>
         )}
       </DetailsContainer>

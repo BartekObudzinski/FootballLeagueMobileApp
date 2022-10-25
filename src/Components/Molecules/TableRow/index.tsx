@@ -5,7 +5,11 @@ import { TableCell } from '../TableCell';
 import { Container } from './styles';
 import { TableRowProps } from './types';
 
-export const TableRow: React.FC<TableRowProps> = ({ data, isHeaderRow }) => {
+export const TableRow: React.FC<TableRowProps> = ({
+  data,
+  isHeaderRow,
+  isLastElement,
+}) => {
   const { balance, standing, points, name, matches } = data;
   const standingValue = isHeaderRow ? standing : `${standing}.`;
   const { navigate } = useNavigation<any>();
@@ -15,7 +19,11 @@ export const TableRow: React.FC<TableRowProps> = ({ data, isHeaderRow }) => {
     });
   };
   return (
-    <Container onPress={openTeamDetails} isHeaderRow={isHeaderRow}>
+    <Container
+      onPress={openTeamDetails}
+      isHeaderRow={isHeaderRow}
+      isLastElement={isLastElement}
+    >
       <TableCell value={standingValue} isHeaderRow={isHeaderRow} />
       <TableCell long value={name} isHeaderRow={isHeaderRow} />
       <TableCell value={matches} isHeaderRow={isHeaderRow} />

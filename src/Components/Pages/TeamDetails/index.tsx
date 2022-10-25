@@ -30,7 +30,7 @@ export const TeamDetails = () => {
       <HeaderContainer>
         <BackArrowIcon style={styles.backArrowIcon} />
         <StyledTypography>Joga Bonito </StyledTypography>
-        <StyledTypography size="small" style={styles.descriptionPosition}>
+        <StyledTypography style={styles.descriptionPosition}>
           Miejsce w rankingu: 1
         </StyledTypography>
       </HeaderContainer>

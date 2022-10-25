@@ -10,10 +10,10 @@ export const DetailFromStatistic: React.FC<DetailFromStatisticProps> = ({
   return (
     <Container>
       <DetailContainer>
-        <Typography size="small">{description}</Typography>
+        <Typography>{description}</Typography>
       </DetailContainer>
       <ValueDetailContianer>
-        <Typography size="small">{value}</Typography>
+        <Typography>{value}</Typography>
       </ValueDetailContianer>
     </Container>
   );

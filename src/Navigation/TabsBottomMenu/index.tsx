@@ -33,7 +33,9 @@ export const TabsBottomMenuStack = () => {
         return {
           headerShadowVisible: false,
           headerTitle: () => (
-            <Typography bold>{headerLabel(route.name)}</Typography>
+            <Typography size="medium" bold>
+              {headerLabel(route.name)}
+            </Typography>
           ),
           headerRight: () => {
             return (
@@ -57,7 +59,6 @@ export const TabsBottomMenuStack = () => {
           tabBarLabel: ({ focused }) => {
             return (
               <Typography
-                size="small"
                 style={[
                   styles.tabBarLabel,
                   { color: focused ? PRIMARY : BLACK, fontSize: 15 }, // TODO: Delete hardcoded value
@@ -74,7 +75,7 @@ export const TabsBottomMenuStack = () => {
       <Tab.Screen name={HOMEPAGE_SCREEN} component={Homepage} />
       <Tab.Screen name={MATCHES_SCREEN} component={Matches} />
       <Tab.Screen name={TABLES_SCREEN} component={Tables} />
-      {isUserAuth && <Tab.Screen name={ADMIN_SCREEN} component={Admin} />}
+      <Tab.Screen name={ADMIN_SCREEN} component={Admin} />
     </Tab.Navigator>
   );
 };

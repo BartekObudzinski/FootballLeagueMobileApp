@@ -6,7 +6,7 @@ import { MatchTeamNameProps } from './types';
 export const MatchTeamName: React.FC<MatchTeamNameProps> = ({ teamName }) => {
   return (
     <Container>
-      <Typography size="small">{teamName}</Typography>
+      <Typography>{teamName}</Typography>
     </Container>
   );
 };

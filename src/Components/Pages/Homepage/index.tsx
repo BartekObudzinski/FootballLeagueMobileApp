@@ -7,7 +7,7 @@ import { Container } from './styles';
 export const Homepage = () => {
   return (
     <Container>
-      <Typography size="small">Nadchodzące spotaknie</Typography>
+      <Typography>Nadchodzące spotaknie</Typography>
       <UpcomingMatch />
       <BestTeams />
     </Container>

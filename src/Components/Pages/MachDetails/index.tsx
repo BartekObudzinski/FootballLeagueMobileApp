@@ -9,7 +9,7 @@ export const MatchDetails = () => {
   return (
     <View style={{ padding: 10 }}>
       <UpcomingMatch />
-      <Typography size="small">Podsumowanie</Typography>
+      <Typography>Podsumowanie</Typography>
       <MatchHalfBar />
       <MatchActionDetail />
       <MatchHalfBar isSecondHalf />

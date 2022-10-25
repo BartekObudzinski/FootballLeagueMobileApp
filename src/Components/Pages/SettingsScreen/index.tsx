@@ -33,7 +33,7 @@ export const SettingsScreen = () => {
       <SettingsHeaderOption
         title={'Zmień język'}
         iconComponent={<Entypo name="language" size={24} />}
-        actionComponent={<Typography size="small">Polski</Typography>}
+        actionComponent={<Typography>Polski</Typography>}
       />
     </View>
   );

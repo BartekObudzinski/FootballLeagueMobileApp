@@ -8,9 +8,7 @@ export const Matches = () => {
   return (
     <Container>
       <WeeksList />
-      <Typography size="small" style={{ marginLeft: 10 }}>
-        Kolejka 1
-      </Typography>
+      <Typography style={{ marginLeft: 10 }}>Kolejka 1</Typography>
       <ScrollContainer showsVerticalScrollIndicator={false}>
         <Match />
         <Match />

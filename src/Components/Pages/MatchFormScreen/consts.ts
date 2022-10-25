@@ -1,0 +1,1 @@
+export const MATCH_FROM_SCREEN = 'MATCH_FROM_SCREEN';

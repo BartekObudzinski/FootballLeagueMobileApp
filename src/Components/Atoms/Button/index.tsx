@@ -6,9 +6,7 @@ export const Button: React.FC<ButtonProps> = memo(
   ({ type = 'fullfiled', children, ...rest }) => {
     return (
       <PressableContainer type={type} {...rest}>
-        <ButtonTypography size="small" type={type}>
-          {children}
-        </ButtonTypography>
+        <ButtonTypography type={type}>{children}</ButtonTypography>
       </PressableContainer>
     );
   },

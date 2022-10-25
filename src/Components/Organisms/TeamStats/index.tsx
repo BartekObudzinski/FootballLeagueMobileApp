@@ -16,7 +16,7 @@ export const TeamStats = () => {
       <DetailFromStatistic description="Ilość kartek" value="5" />
       {/** TODO: This should be done this way but im not sure how it will looks */}
       <View style={{ alignItems: 'center' }}>
-        <Typography size="small">Najlepszy strzelec</Typography>
+        <Typography>Najlepszy strzelec</Typography>
         <Fontisto name="person" size={24} color="black" />
         <View
           style={{
@@ -25,7 +25,7 @@ export const TeamStats = () => {
             justifyContent: 'center',
           }}
         >
-          <Typography size="small">Damian Kowalczyk</Typography>
+          <Typography>Damian Kowalczyk</Typography>
           <View
             style={{
               height: 5,
@@ -35,7 +35,7 @@ export const TeamStats = () => {
               marginHorizontal: 5,
             }}
           />
-          <Typography size="small">5 goli</Typography>
+          <Typography>5 goli</Typography>
         </View>
       </View>
     </Container>

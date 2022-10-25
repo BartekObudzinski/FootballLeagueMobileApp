@@ -1,62 +1,45 @@
 import { LoginScreen } from 'Components/Pages/LoginScreen';
 import { LOGIN_SCREEN } from 'Components/Pages/LoginScreen/consts';
-import { MatchDetails } from 'Components/Pages/MachDetails';
+import { MatchFormScreen } from 'Components/Pages/MatchFormScreen';
+import { MATCH_FROM_SCREEN } from 'Components/Pages/MatchFormScreen/consts';
+import { ResultFormScreen } from 'Components/Pages/ResultFormScreen';
+import { RESULT_FORM_SCREEN } from 'Components/Pages/ResultFormScreen/consts';
 import { SettingsScreen } from 'Components/Pages/SettingsScreen';
 import { SETTINGS_SCREEN } from 'Components/Pages/SettingsScreen/consts';
-import { TeamDetails } from 'Components/Pages/TeamDetails';
-import { MATCH_DETAILS_SCREEN } from 'Navigation/MatchDetailsScreen/consts';
-import { TabsBottomMenuStack } from 'Navigation/TabsBottomMenu';
-import { TABS_BOTTOM_MENU } from 'Navigation/TabsBottomMenu/consts';
-import { TEAM_DETAILS_SCREEN } from 'Navigation/TeamDetailsScreen/consts';
+import { TeamFormScreen } from 'Components/Pages/TeamFormScreen';
+import { TEAM_FORM_SCREEN } from 'Components/Pages/TeamFormScreen/consts';
+import { WeekFormScreen } from 'Components/Pages/WeekFormScreen';
+import { WEEK_FORM_SCREEN } from 'Components/Pages/WeekFormScreen/consts';
 import React from 'react';
 import theme from 'Setup/theme';
 import { RootStackNavigator } from './consts';
+import { LoginStackScreen } from './Screens/LoginStackScreen';
+import { MatchDetailsStackScreen } from './Screens/MatchDetailsStackScreen';
+import { MatchFormStackScreen } from './Screens/MatchFormStackScreen';
+import { ResultFormStackScreen } from './Screens/ResultFormStackScreen';
+import { SettingsStackScreen } from './Screens/SettingsStackScreen';
+import { TabsBottomMenuStackScreen } from './Screens/TabsBottomMenuStackScreen';
+import { TeamDetailsStackScreen } from './Screens/TeamDetailsStackScreen';
+import { TeamFormStackScreen } from './Screens/TeamFormStackScreen';
+import { WeekFormStackScreen } from './Screens/WeekFormStackScreen';
 
 export const RootStack = () => {
   return (
-    <RootStackNavigator.Navigator>
-      <RootStackNavigator.Screen
-        options={{
-          headerShown: false,
-        }}
-        name={TABS_BOTTOM_MENU}
-        component={TabsBottomMenuStack}
-      />
-      <RootStackNavigator.Screen
-        options={{
-          contentStyle: { backgroundColor: theme.colors.WHITE },
-          headerShadowVisible: false,
-          headerTitle: 'Kolejka 1', // TODO: Function that return current week in header navigation
-        }}
-        name={MATCH_DETAILS_SCREEN}
-        component={MatchDetails}
-      />
-      <RootStackNavigator.Screen
-        options={{
-          headerShown: false,
-          contentStyle: { backgroundColor: theme.colors.SECONDARY },
-        }}
-        name={TEAM_DETAILS_SCREEN}
-        component={TeamDetails}
-      />
-
-      <RootStackNavigator.Screen
-        options={{
-          contentStyle: { backgroundColor: theme.colors.WHITE },
-          headerTitle: 'Ustawienia',
-        }}
-        name={SETTINGS_SCREEN}
-        component={SettingsScreen}
-      />
-
-      <RootStackNavigator.Screen
-        options={{
-          contentStyle: { backgroundColor: theme.colors.WHITE },
-          headerTitle: 'Login',
-        }}
-        name={LOGIN_SCREEN}
-        component={LoginScreen}
-      />
+    <RootStackNavigator.Navigator
+      screenOptions={{
+        contentStyle: { backgroundColor: 'red' },
+        headerShadowVisible: true,
+      }}
+    >
+      {TabsBottomMenuStackScreen(RootStackNavigator)}
+      {MatchDetailsStackScreen(RootStackNavigator)}
+      {TeamDetailsStackScreen(RootStackNavigator)}
+      {SettingsStackScreen(RootStackNavigator)}
+      {LoginStackScreen(RootStackNavigator)}
+      {TeamFormStackScreen(RootStackNavigator)}
+      {WeekFormStackScreen(RootStackNavigator)}
+      {MatchFormStackScreen(RootStackNavigator)}
+      {ResultFormStackScreen(RootStackNavigator)}
     </RootStackNavigator.Navigator>
   );
 };

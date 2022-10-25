@@ -1,13 +1,14 @@
 import { Typography } from 'Components/Atoms/Typography';
 import { View } from 'react-native';
+import theme from 'Setup/theme';
 import styled from 'styled-components';
 
 export const Container = styled(View)`
   padding-horizontal: 10;
   flex-direction: row;
   align-items: center;
-  border: 1px #00000022 solid;
-  padding-vertical: 5;
+  border: 1px ${theme.colors.DARK_GREEN_OPACITY} solid;
+  height: 65px;
   justify-content: space-between;
 `;
 
