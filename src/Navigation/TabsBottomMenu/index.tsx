@@ -10,7 +10,8 @@ import { MATCHES_SCREEN } from 'Components/Pages/Matches/consts';
 import { SETTINGS_SCREEN } from 'Components/Pages/SettingsScreen/consts';
 import { Tables } from 'Components/Pages/Tables';
 import { TABLES_SCREEN } from 'Components/Pages/Tables/consts';
-import React from 'react';
+import { AuthContext } from '../../Contexts/auth-context';
+import React, { useContext } from 'react';
 import theme from 'Setup/theme';
 import { Tab, TAB_ICON_SIZE } from './consts';
 import { styles } from './styles';
@@ -18,7 +19,8 @@ import { headerLabel } from './Utils/header-label';
 import { iconProperties } from './Utils/icon-properties';
 
 export const TabsBottomMenuStack = () => {
-  const isUserAuth = false;
+  const { isUserAuth } = useContext(AuthContext);
+
   return (
     <Tab.Navigator
       sceneContainerStyle={{ backgroundColor: theme.colors.WHITE }}
@@ -75,7 +77,7 @@ export const TabsBottomMenuStack = () => {
       <Tab.Screen name={HOMEPAGE_SCREEN} component={Homepage} />
       <Tab.Screen name={MATCHES_SCREEN} component={Matches} />
       <Tab.Screen name={TABLES_SCREEN} component={Tables} />
-      <Tab.Screen name={ADMIN_SCREEN} component={Admin} />
+      {isUserAuth && <Tab.Screen name={ADMIN_SCREEN} component={Admin} />}
     </Tab.Navigator>
   );
 };

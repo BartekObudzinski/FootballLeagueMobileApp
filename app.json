@@ -14,17 +14,20 @@
     "updates": {
       "fallbackToCacheTimeout": 0
     },
-    "assetBundlePatterns": [
-      "**/*"
-    ],
+    "assetBundlePatterns": ["**/*"],
     "ios": {
       "supportsTablet": true
+    },
+    "packagerOpts": {
+      "sourceExts": ["cjs"]
     },
     "android": {
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
         "backgroundColor": "#FFFFFF"
-      }
+      },
+      "package": "com.bartekobudzinski.footballleagueapp",
+      "versionCode": 1
     },
     "web": {
       "favicon": "./assets/favicon.png"

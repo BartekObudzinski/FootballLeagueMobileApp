@@ -3,6 +3,7 @@ import { LogBox } from 'react-native';
 import { NavigationContainer } from '@react-navigation/native';
 import { RootStack } from './src/Navigation/RootNavigator';
 import { useFonts } from 'expo-font';
+import { AuthContextProvider } from './src/Contexts/auth-context';
 LogBox.ignoreAllLogs();
 const App = () => {
   /** If something is unsued at the end, delete it */
@@ -19,9 +20,11 @@ const App = () => {
   }
 
   return (
-    <NavigationContainer>
-      <RootStack />
-    </NavigationContainer>
+    <AuthContextProvider>
+      <NavigationContainer>
+        <RootStack />
+      </NavigationContainer>
+    </AuthContextProvider>
   );
 };
 

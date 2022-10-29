@@ -1,26 +1,47 @@
-import { Entypo } from '@expo/vector-icons';
-import { useNavigation } from '@react-navigation/native';
+import { auth } from 'Setup/config';
+import { AuthContext } from '../../../Contexts/auth-context';
 import { Button } from 'Components/Atoms/Button';
-
-import { Typography } from 'Components/Atoms/Typography';
+import { Entypo } from '@expo/vector-icons';
+import { HOMEPAGE_SCREEN } from '../Homepage/consts';
+import { LOGIN_SCREEN } from '../LoginScreen/consts';
 import { SettingsHeader } from 'Components/Molecules/SettingsHeader';
 import { SettingsHeaderOption } from 'Components/Molecules/SettingsHeaderOption';
-import { Switch, SwitchBase, View } from 'react-native';
-import { LOGIN_SCREEN } from '../LoginScreen/consts';
+import { Switch, View } from 'react-native';
+import { Typography } from 'Components/Atoms/Typography';
+import { useContext } from 'react';
+import { useNavigation } from '@react-navigation/native';
 
 export const SettingsScreen = () => {
   const { navigate } = useNavigation<any>();
   const navigateToLoginScreen = () => {
     navigate(LOGIN_SCREEN);
   };
+  const { isUserAuth } = useContext(AuthContext);
   return (
     <View style={{ flex: 1, paddingVertical: 10 }}>
       <SettingsHeader title="Użytkownik" />
       <SettingsHeaderOption
-        title={'Niezalogowany'}
+        title={isUserAuth ? auth.currentUser?.email! : 'Niezalogowany'}
         iconComponent={<Entypo name="user" size={24} />}
         actionComponent={
-          <Button onPress={navigateToLoginScreen}>ZALOGUJ SIĘ</Button>
+          isUserAuth ? (
+            <Button
+              onPress={() => {
+                auth
+                  .signOut()
+                  .then(() => {
+                    navigate(HOMEPAGE_SCREEN);
+                  })
+                  .catch(() => {
+                    new Error('Error during logging out');
+                  });
+              }}
+            >
+              WYLOGUJ SIĘ
+            </Button>
+          ) : (
+            <Button onPress={navigateToLoginScreen}>ZALOGUJ SIĘ</Button>
+          )
         }
       />
       <SettingsHeader title="Motyw" />
