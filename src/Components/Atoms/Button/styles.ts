@@ -27,6 +27,11 @@ export const PressableContainer = styled(Pressable)<StyledButtonProps>`
         `;
     }
   }}
+  ${({ disabled }) =>
+    disabled &&
+    css`
+      background-color: #e2e2e2;
+    `}
 `;
 
 export const ButtonTypography = styled(Typography)<StyledButtonProps>`
