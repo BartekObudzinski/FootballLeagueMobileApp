@@ -1,0 +1,1 @@
+export const SEASON_FORM_SCREEN = 'SEASON_FORM_SCREEN';

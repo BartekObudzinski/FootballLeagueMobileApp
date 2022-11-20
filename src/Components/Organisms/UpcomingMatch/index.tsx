@@ -1,29 +1,36 @@
 import React from 'react';
-import { SHADOW_DISTANCE } from './contsts';
 import {
   Container,
   DetailsContainer,
   MatchContainer,
-  ShadowContainer,
   StyledTypography,
 } from './styles';
 
-export const UpcomingMatch = () => {
+export const UpcomingMatch = (props: {
+  match: {
+    date: string;
+    guest: string;
+    host: string;
+    id: string;
+    time: string;
+    week: string;
+  };
+}) => {
   return (
     <Container>
       <MatchContainer>
-        <StyledTypography>Team 1</StyledTypography>
+        <StyledTypography>{props.match.host}</StyledTypography>
         <StyledTypography size="medium" marginTop>
           VS
         </StyledTypography>
 
-        <StyledTypography>Team 2</StyledTypography>
+        <StyledTypography>{props.match.guest}</StyledTypography>
       </MatchContainer>
       <DetailsContainer>
         <StyledTypography marginBottom size="large">
-          19:30
+          {props.match.time}
         </StyledTypography>
-        <StyledTypography>10.10.2022</StyledTypography>
+        <StyledTypography>{props.match.date}</StyledTypography>
       </DetailsContainer>
     </Container>
   );

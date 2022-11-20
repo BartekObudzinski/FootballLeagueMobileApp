@@ -9,7 +9,7 @@ export const WeekContainer = styled(TouchableOpacity)`
   background-color: ${theme.colors.SECONDARY};
   border-radius: 10px;
   padding-horizontal: 15;
-  padding-vertical: 5
+  padding-vertical: 15
   align-items: center;
   justify-content: center;
 `;
